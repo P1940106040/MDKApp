@@ -1,0 +1,29 @@
+{
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"ActivityIndicatorText": "Downloading...",
+	"DefiningRequests": [
+		{
+			"Name": "Customers",
+			"Query": "Customers"
+		},
+		{
+			"Name": "Products",
+			"Query": "Products"
+		},
+		{
+			"Name": "SalesOrderHeaders",
+			"Query": "SalesOrderHeaders"
+		},
+		{
+			"Name": "SalesOrderItems",
+			"Query": "SalesOrderItems"
+		}
+	],
+	"OnFailure": "/MDKApp/Actions/Service/InitializeOfflineFailureMessage.action",
+	"OnSuccess": "/MDKApp/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"Service": "/MDKApp/Services/Sample.service",
+	"ShowActivityIndicator": true,
+	"_Type": "Action.Type.ODataService.Initialize"
+}
